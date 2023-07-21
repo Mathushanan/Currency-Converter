@@ -6,7 +6,7 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'nexa', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
 
 }
 
@@ -51,18 +51,18 @@ header {
 }
 
 
-header a{
+header .logo{
     font-size: 1.2rem;
     font-weight: 500;
     color:var(--text-color)
 }
-header a:hover i{
+header .logo:hover i{
     color:var(--main-color)
 }
-header a:hover{
+header .logo:hover{
     color:var(--main-color)
 }
-header a:hover span{
+header .logo:hover span{
     color:var(--text-color)
 }
 header i{
@@ -71,17 +71,55 @@ header i{
 header a span{
    color: var(--main-color);
 }
-.explore-span{
+.explore-a{
     font-size: 1rem;
-    border: 1px solid;
+    border: 2px solid;
     padding: .8rem;
     background-color: var(--main-color);
     color:#FFFFFF;
     border-radius: 3px;
+    transition: all .45s ease;
+}
+.explore-a i{
+    
+    transition: all .45s ease;
+}
+.explore-a:hover{
+
+    background-color: var(--bg-color);
+    color:var(--main-color);
+}
+.explore-a:hover i{
+transform: translateY(8px);
 }
 section{
-    border: 1px solid;
+   
+    
+
 }
+.home{
+    position:relative;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    top:70px;
+
+}
+.home video{
+    position: absolute;
+    left: 0;
+    top:0;
+    width:100%;
+    height: 50vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hi{
+    height: 10vh;
+   padding: 3rem;
+}
+
 
 
 
@@ -171,56 +209,9 @@ section{
  }
 
   
-
-
-
-
-
-
-
-    .home.section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        position: relative;
-
-    }
-
-    .home_container {
-
-        display: flex;
-        flex-direction: column;
-        /* Stack the elements vertically */
-        align-items: center;
-        padding: 1rem;
-        border-radius: 5px;
-        position: fixed;
-        z-index: 1000;
-        bottom: 1rem;
-        box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
-
-    }
-
-    .home_content {
-        grid-template-columns: 1fr;
-        /* Display a single column */
-        padding-top: 1.5rem;
-        /* Adjust the top padding */
-        text-align: center;
-        /* Center align the content */
-        margin: 0;
-        padding: 0;
-        align-items: center;
-        justify-content: center;
-    }
-
-    
-    .home-text {
-        margin: 0;
-    }
-
-
+.home {
+    min-height: 600px;
+}
 
 
 
@@ -250,6 +241,9 @@ section{
         /* Center align the icons */
 
     }
+  .explore-a{
+    display: none;
+  }
 
   
 
