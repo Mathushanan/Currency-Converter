@@ -235,7 +235,7 @@ const apiURL = 'https://api.currencyfreaks.com/v2.0/rates/latest?apikey=7b926469
           // Check if the API returned the data successfully
           if (response.ok) {
             // Extract required information from the JSON response
-            const date = data.date;
+            const date = data.date.split(' ')[0];
             const baseCurrency = data.base;
             const rates = data.rates;
   
@@ -252,9 +252,9 @@ const apiURL = 'https://api.currencyfreaks.com/v2.0/rates/latest?apikey=7b926469
             const table3Currencies = allCurrencies.slice(currenciesPerTable * 2);
   
             // Create HTML strings for each table
-            let table1Html = `<table class="table"><caption>Table 1</caption><tr><th>Currency</th><th>Rate</th></tr>`;
-            let table2Html = `<table class="table"><caption>Table 2</caption><tr><th>Currency</th><th>Rate</th></tr>`;
-            let table3Html = `<table class="table"><caption>Table 3</caption><tr><th>Currency</th><th>Rate</th></tr>`;
+            let table1Html = `<table class="table1 table" id="table1"><tr><th>Currency</th><th>Rate</th></tr>`;
+            let table2Html = `<table class="table2 table" id="table2"><tr><th>Currency</th><th>Rate</th></tr>`;
+            let table3Html = `<table class="table3 table" id="table3"><tr><th>Currency</th><th>Rate</th></tr>`;
   
             // Add each exchange rate to the corresponding table
             for (const currency of table1Currencies) {
@@ -279,10 +279,14 @@ const apiURL = 'https://api.currencyfreaks.com/v2.0/rates/latest?apikey=7b926469
   
             // Combine all tables into one container
             const exchangeRatesDiv = document.getElementById('exchange-rates');
-            exchangeRatesDiv.innerHTML = `<h1>Exchange Rates</h1>
-            <p>Date: ${date}</p>
-            <p>Base Currency: ${baseCurrency}</p>
-            <p>Time: ${new Date().toLocaleTimeString()}</p>
+            exchangeRatesDiv.innerHTML = `
+            <div class="title">
+            <p id="base">Base Currency: <span>${baseCurrency}</span></p>
+            <p id="date">Date: ${date}</p>
+            
+            <p id="time">Time: ${new Date().toLocaleTimeString()}</p>
+           
+            </div>
             <div class="container">
               ${table1Html}
               ${table2Html}
@@ -298,3 +302,26 @@ const apiURL = 'https://api.currencyfreaks.com/v2.0/rates/latest?apikey=7b926469
   
       // Call the function to fetch and display the latest exchange rates
       fetchAndDisplayExchangeRates();
+
+      let isClicked=false;
+      function viewAllRates(){
+        const table2=document.getElementById("table2");
+        const table3=document.getElementById("table3");
+        const btn=document.getElementById("viewAllBtn");
+
+        if(!isClicked){
+          
+          table2.style.display="block";
+          table3.style.display="block";
+          btn.innerHTML='Hide <i class="fa-solid fa-eye-slash">';
+
+        }else{
+          table2.style.display="none";
+          table3.style.display="none";
+          btn.innerHTML='View All <i class="fa-solid fa-angles-right">';
+        }
+        isClicked=!isClicked;
+        
+
+        
+      }

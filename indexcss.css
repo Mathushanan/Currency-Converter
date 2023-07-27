@@ -20,7 +20,7 @@ a {
     --second-bg-color: #E8EAE3;
     --text-color: #0B4141;
     --second-color: #FAF0DC;
-    --main-color: #FF6864;
+    --main-color: #007BFF;
     --big-font: 5rem;
     --h2-font: 2.5rem;
     --p-font: 1.1rem;
@@ -113,8 +113,9 @@ header a span {
 .home {
     position: relative;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.6);
-    top: 70px;
+    top: 60px;
+    
+ 
 
 
 }
@@ -127,13 +128,10 @@ header a span {
     height: 50vh;
     object-fit: cover;
     z-index: -1;
+    opacity: .5;
 }
 
-.content {
-    padding: 120px 12% 100px;
 
-
-}
 
 .search-box {
 
@@ -185,6 +183,7 @@ header a span {
     border-radius: 2px;
     border: 1px solid var(--main-color);
     transition: all .45s ease;
+    font-size: 1rem;
 
 }
 
@@ -254,16 +253,13 @@ select {
     outline: none;
     box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
 
-
-
-
-
-
 }
 
 select:focus {
 
-    box-shadow: 0 0 4px 2px rgba(255, 104, 100, .2);
+    border: 2px solid var(--main-color);
+    border-radius: 2px;
+    ;
 }
 
 
@@ -273,6 +269,10 @@ select:focus {
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     align-items: center;
     gap: 1.5rem;
+  
+    padding: 50px 12% 50px;
+
+
 
 }
 
@@ -284,9 +284,10 @@ select:focus {
 
 
 .explore-currencies {
-    padding: 120px 0 100px;
+    padding: 120px 0 50px;
     text-align: center;
-  
+   
+
 }
 
 .explore-currencies .viewAll {
@@ -298,37 +299,197 @@ select:focus {
     border-radius: 3px;
     transition: all .45s ease;
     border: 1px solid;
-    
+
 }
 
-.viewAll i{
+.viewAll i {
 
     transition: all .45s ease;
- }
+}
+
 .viewAll:hover {
 
     background-color: var(--bg-color);
     color: var(--main-color);
 }
-.viewAll:hover i{
 
-   transform: translateX(8px);
+.viewAll:hover i {
+
+    transform: translateX(8px);
 }
 
 
 
 .container {
     display: flex;
-  }
-  .table {
+    justify-content: space-between;
+    text-align: center;
+  
+
+}
+
+.table {
     margin: 10px;
     border-collapse: collapse;
-  }
-  .table th,
-  .table td {
+}
+
+.table th,
+.table td {
     padding: 8px;
-    border: 1px solid black;
-  }
+
+
+}
+
+.table th {
+    color: var(--text-color);
+}
+
+tbody tr td:first-child {
+
+    font-weight: bold;
+    /* Example: Make the text in the first column bold */
+    color: #32CD32;
+}
+
+tbody tr td:nth-child(2) {
+    color: #FF0000;
+
+}
+
+.exchangeRates {
+    padding: 100px 12% 100px;
+    text-align: center;
+    
+  
+
+}
+
+.exchangeRates .title {
+
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+padding: 1rem;
+    
+}
+
+.exchangeRates .title h1 {
+
+    margin-bottom: 2rem;
+}
+
+.exchangeRates .title #date {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.exchangeRates .title #base {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.exchangeRates .title #base span {
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.viewAll-clicked {
+    display: inline-block;
+}
+
+.exchangeRates .viewAll {
+    font-size: 1rem;
+    border: none;
+    padding: .8rem 2rem;
+    background-color: var(--main-color);
+    color: #FFFFFF;
+    border-radius: 3px;
+    transition: all .45s ease;
+
+
+}
+
+#viewAllBtn {
+    display: none;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.title {
+    margin-top: 3rem;
+}
+
+
+
+.footer .section{
+    background-color: #f2f2f2;
+    
+    padding: 40px 12% 10px;
+    
+}
+.footer .section .main-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.footer .contact-box .home_social{
+    display:flex;
+    align-items: center;
+}
+.footer .contact-box{
+  
+    align-items: center;
+}
+
+.footer .nav-box .nav-list{
+    display:block;
+}
+
+.footer .contact-box .home_social i{
+    color: var(--text-color);
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+.footer .nav-list a{
+    color: var(--text-color)
+  
+}
+.footer .nav-list a:hover{
+    
+    text-decoration: underline;
+  
+}
+
+.footer .copyright-footer{
+    margin:2rem 0 2rem 0;
+   
+}
+.copyright{
+    text-align: center;
+}
+.footer hr{
+    border: none;
+    border-top: 2px solid var(--text-color);
+    margin-bottom: 1rem;
+    
+}
+.footer .copyright p{
+    color: var(--text-color)
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -359,18 +520,12 @@ select:focus {
         transition: .1s;
     }
 
-    .home {
-        height: 87vh;
-    }
 
 
 
 }
 
-@media(max-width:920px) {
-
-
-}
+@media(max-width:920px) {}
 
 
 
@@ -418,6 +573,28 @@ select:focus {
         width: 100%;
     }
 
+    .table2,
+    .table3 {
+        display: none;
+    }
+    .exchangeRates {
+        padding: 0 1rem 2rem;
+     
+        
+      
+    
+    }
+
+    .container {
+
+        display: inline-block;
+
+    }
+
+    #viewAllBtn {
+        display: inline-block;
+    }
+
 }
 
 @media(max-width:500px) {
@@ -444,7 +621,7 @@ select:focus {
     .mobile-button-div {
 
         text-align: center;
-       
+
 
     }
 
@@ -476,6 +653,11 @@ select:focus {
 
 
         padding: 0;
+    }
+    .footer .section{
+               
+        padding: 20px 12% 5px;
+        
     }
 
 }

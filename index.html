@@ -24,16 +24,17 @@
     <header>
 
         <a class="logo">Currency <span>Converter</span><i class="fa-solid fa-coins"></i></a>
-        <a href="#" class="explore-a"> Explore Currencies<i class="fa-solid fa-arrow-down"></i></i></a>
+        <a href="#explore-currencies" class="explore-a"> Explore Currencies<i
+                class="fa-solid fa-arrow-down"></i></i></a>
 
 
     </header>
     <main>
-        <section class="home">
+        <section class="home" id="home">
             <video src="video.mp4" autoplay muted loop></video>
 
 
-           
+
             <div class="content">
                 <div class="box">
 
@@ -79,7 +80,7 @@
 
             </div>
             <div class="mobile-button-div">
-                <a href="#" class="explore-a mobile-button"> Explore Currencies <i
+                <a href="#explore-currencies" class="explore-a mobile-button"> Explore Currencies <i
                         class="fa-solid fa-arrow-down"></i></a>
 
             </div>
@@ -87,27 +88,72 @@
 
         </section>
 
-        <section class="explore-currencies">
+        <section class="explore-currencies" id="explore-currencies">
             <div class="main-text">
-                
-                <h2>Available Currencies</h2>
-             </div>
+
+                <h2 class="main-text">Available Currencies</h2>
+            </div>
             <div class="content" id="content">
 
-               
+
 
             </div>
-            <button class="viewAll" id="viewAllButton" onclick="viewAll()">View All <i class="fa-solid fa-angles-right"></i></button>
+            <button class="viewAll" id="viewAllButton" onclick="viewAll()">View All <i
+                    class="fa-solid fa-angles-right"></i></button>
         </section>
 
-        <section>
+
+        <section class="exchangeRates" id="exchangeRates">
+            <h1 class="main-text">Exchange Rates</h1>
             <div id="exchange-rates">
-                <!-- The exchange rates will be displayed here -->
-              </div>
-            
+
+            </div>
+            <button class="viewAll" id="viewAllBtn" onclick="viewAllRates()">View All <i
+                    class="fa-solid fa-angles-right"></i></button>
+
         </section>
 
     </main>
+    <footer class="footer">
+        <section class="footer-section section" id="footer">
+            <div class="main-footer">
+                <div class="nav-box">
+
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#explore-currencies">Available Currencies</a></li>
+                        <li class="nav-item"><a href="#exchangeRates">Exchange Rates</a></li>
+
+
+                    </ul>
+
+                </div>
+
+                <div class="contact-box">
+                    <div class="home_social">
+                        <a href="https://www.linkedin.com/in/mathushanan-mahendrarajah-483873244/" target="_blank"
+                            class="home_social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Mathushanan" target="_blank" class="home_social-icon">
+                            <i class="fab fa-github"></i>
+
+                        </a>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="copyright-footer">
+                <hr class="line">
+                <div class="copyright">
+                    <p> &copy; 2023 All rights reserved.</p>
+                </div>
+
+            </div>
+
+        </section>
+    </footer>
     <script src="indexjs.js"></script>
 </body>
 
