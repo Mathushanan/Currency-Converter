@@ -114,8 +114,8 @@ header a span {
     position: relative;
     justify-content: center;
     top: 60px;
-    
- 
+
+
 
 
 }
@@ -255,6 +255,7 @@ select {
 
 }
 
+
 select:focus {
 
     border: 2px solid var(--main-color);
@@ -269,7 +270,7 @@ select:focus {
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     align-items: center;
     gap: 1.5rem;
-  
+
     padding: 50px 12% 50px;
 
 
@@ -286,7 +287,7 @@ select:focus {
 .explore-currencies {
     padding: 120px 0 50px;
     text-align: center;
-   
+
 
 }
 
@@ -324,7 +325,7 @@ select:focus {
     display: flex;
     justify-content: space-between;
     text-align: center;
-  
+
 
 }
 
@@ -359,8 +360,8 @@ tbody tr td:nth-child(2) {
 .exchangeRates {
     padding: 100px 12% 100px;
     text-align: center;
-    
-  
+
+
 
 }
 
@@ -369,8 +370,8 @@ tbody tr td:nth-child(2) {
     margin-bottom: 2rem;
     border-radius: 5px;
     box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
-padding: 1rem;
-    
+    padding: 1rem;
+
 }
 
 .exchangeRates .title h1 {
@@ -425,58 +426,71 @@ tr:nth-child(even) {
 
 
 
-.footer .section{
+.footer .section {
     background-color: #f2f2f2;
-    
+
     padding: 40px 12% 10px;
-    
+
 }
-.footer .section .main-footer{
+
+.footer .section .main-footer {
     display: flex;
     justify-content: space-between;
 }
-.footer .contact-box .home_social{
-    display:flex;
+
+.footer .contact-box .home_social {
+    display: flex;
     align-items: center;
 }
-.footer .contact-box{
+
+
+.footer .contact-box {
+
+    align-items: center;
   
-    align-items: center;
 }
 
-.footer .nav-box .nav-list{
-    display:block;
+.footer .nav-box .nav-list {
+    display: block;
+}
+.footer .nav-box .nav-list li{
+   margin-top: .5rem;
 }
 
-.footer .contact-box .home_social i{
+.footer .contact-box .home_social i {
     color: var(--text-color);
     margin-left: 2rem;
     font-size: 1.5rem;
 }
-.footer .nav-list a{
+
+.footer .nav-list a {
     color: var(--text-color)
-  
-}
-.footer .nav-list a:hover{
-    
-    text-decoration: underline;
-  
+
 }
 
-.footer .copyright-footer{
-    margin:2rem 0 2rem 0;
-   
+.footer .nav-list a:hover {
+
+    text-decoration: underline;
+
 }
-.copyright{
+
+.footer .copyright-footer {
+    margin: 2rem 0 2rem 0;
+
+}
+
+.copyright {
     text-align: center;
 }
-.footer hr{
+
+.footer hr {
     border: none;
     border-top: 2px solid var(--text-color);
     margin-bottom: 1rem;
-    
+
 }
-.footer .copyright p{
+
+.footer .copyright p {
     color: var(--text-color)
 }
 
@@ -577,12 +591,13 @@ tr:nth-child(even) {
     .table3 {
         display: none;
     }
+
     .exchangeRates {
         padding: 0 1rem 2rem;
-     
-        
-      
-    
+
+
+
+
     }
 
     .container {
@@ -654,10 +669,12 @@ tr:nth-child(even) {
 
         padding: 0;
     }
-    .footer .section{
-               
+
+    .footer .section {
+
         padding: 20px 12% 5px;
-        
+    
+
     }
 
 }
